@@ -1,8 +1,8 @@
 BOFNAME := enum_filter_driver
 COMINCLUDE := -I ../../common
 LIBINCLUDE := 
-CC_x64 := x86_64-w64-mingw32-gcc
-CC_x86 := i686-w64-mingw32-gcc
+CC_x64 := x86_64-w64-mingw32-gcc -fno-jump-tables -fomit-frame-pointer -ffixed-rbp
+CC_x86 := i686-w64-mingw32-gcc -fno-jump-tables -fomit-frame-pointer -ffixed-ebp
 CC=x86_64-w64-mingw32-clang
 
 all:
